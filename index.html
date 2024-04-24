@@ -1,0 +1,141 @@
+<html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iportfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #009688; /* Verde scuro */
+            cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            list-style-type: disc;
+            color: #444;
+        }
+        strong {
+            color: #009688; /* Verde scuro */
+        }
+        .avatar {
+            width: 150px; /* Dimensioni dell'immagine */
+            height: 150px;
+            border-radius: 3px; /* Rendi l'immagine quadrata */
+            margin-right: 3px; /* Aggiungi spazio a destra dell'immagine */
+            float: right; /* Sposta l'immagine a destra */
+            margin-top: -20px; /* Alza leggermente l'immagine */
+        }
+        .hidden {
+            display: none; /* Nascondi il contenuto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Iportfolio</h1>
+    </header>
+
+    <section class="section" style="background-color: #ffcc80;"> <!-- Arancione chiaro -->
+        <h2 onclick="toggleContent(this)" style="color: #e65100;">Dati personali</h2> <!-- Arancione scuro -->
+        <div class="hidden">
+            <img class="avatar" src="foto profilo.jpg" alt="Foto Profilo">
+            <p><strong>Nome:</strong> Rocco Amati</p>
+            <p><strong>Data di nascita:</strong> 09/02/2007</p>
+            <p><strong>Indirizzo:</strong> Via Enrico Fermi,2- 85100,Potenza</p>
+            <p><strong>Telefono:</strong> 3496167531</p>
+            <p><strong>Email:</strong> rocas.amati@gmail.com</p>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #bbdefb;"> <!-- Blu chiaro -->
+        <h2 onclick="toggleContent(this)" style="color: #1565c0;">Istruzione</h2> <!-- Blu scuro -->
+        <div class="hidden">
+            <p><strong>Diploma Perito Informatico</strong></p>
+            <p>IIS Einstein-De Lorenzo Potenza</p>
+            <p>Anno di Diploma: In Corso...</p>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #ffe0b2;"> <!-- Giallo chiaro -->
+        <h2 onclick="toggleContent(this)" style="color: #f57c00;">Esperienza lavorativa</h2> <!-- Arancione scuro -->
+        <div class="hidden">
+            <p><strong>Animatore estivo</strong></p>
+            <p>Centro Estivo Parrocchia S.Maria</p>
+            <p>Da giugno 2021 a settembre 2021</p>
+            <p>Da giugno 2022 a settembre 2022</p>
+            <p>Da giugno 2023 a settembre 2023</p>
+            <ul>
+                <li>Centro Estivo PILUMBA'</li>
+                <li>Da giugno 2024 a settembre 2024</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #c8e6c9;"> <!-- Verde chiaro -->
+        <h2 onclick="toggleContent(this)" style="color: #2e7d32;">Competenze</h2> <!-- Verde scuro -->
+        <div class="hidden">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>BootStrap</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #ffe0b2;"> <!-- Giallo chiaro -->
+        <h2 onclick="toggleContent(this)" style="color: #f57c00;">Lingue</h2> <!-- Arancione scuro -->
+        <div class="hidden">
+            <ul>
+                <li>Italiano (madrelingua)</li>
+                <li>Inglese (livello intermedio)</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Ultimo aggiornamento: Aprile 2024</p>
+    </footer>
+
+    <script>
+        function toggleContent(element) {
+            var content = element.nextElementSibling; // Ottiene il contenuto successivo all'elemento h2
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden'); // Mostra il contenuto
+            } else {
+                content.classList.add('hidden'); // Nasconde il contenuto
+            }
+        }
+    </script>
+</body>
+</html>
